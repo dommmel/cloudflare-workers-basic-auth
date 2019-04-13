@@ -1,0 +1,14 @@
+{
+  "name": "cloudflare-worker-basic-auth",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {},
+  "scripts": {
+    "build": "webpack index.js --mode=production"
+  },
+  "devDependencies": {
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0"
+  }
+}
