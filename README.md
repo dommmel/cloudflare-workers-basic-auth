@@ -6,16 +6,9 @@ I use it to protect static html pages.
 
 # Usage
 
-1. Set credentials in index.js
+1. Set credentials in `index.js`
 ```
 const NAME = "super"
 const PASS = "secret"
 ```
-2. Build
-```
-yarn build
-```
-(or `npm run build` )
-
-3. copy `dist/main.js` to your cloudflare worker and deploy
-
+3. Save and copy `index.js` to your cloudflare worker and deploy
