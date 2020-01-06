@@ -31,14 +31,6 @@ const Credentials = function(name, pass) {
 }
 
 /**
- * Decode base64 string.
- */
-
-const decodeBase64 = function(str) {
-  return new Buffer(str, 'base64').toString()
-}
-
-/**
  * Parse basic auth to object.
  */
 
@@ -55,7 +47,7 @@ const parseAuthHeader = function(string) {
   }
 
   // decode user pass
-  const userPass = USER_PASS_REGEXP.exec(decodeBase64(match[1]))
+  const userPass = USER_PASS_REGEXP.exec(atob(match[1]))
 
   if (!userPass) {
     return undefined
