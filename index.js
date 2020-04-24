@@ -60,10 +60,8 @@ const parseAuthHeader = function(string) {
 
 const unauthorizedResponse = function(body) {
   return new Response(
-    null, {
+    body, {
       status: 401,
-      statusText: "'Authentication required.'",
-      body: body,
       headers: {
         "WWW-Authenticate": 'Basic realm="User Visible Realm"'
       }
